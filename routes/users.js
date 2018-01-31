@@ -61,11 +61,11 @@ router.post('/users', verifyBody, validateEmail, (req, res, next) => {
       );
     })
     .then(results => {
-      // console.log(results, 'this is the resul');
+      console.log(results, 'this is the resul');
       delete results[0].hashed_password;
       let cert = JWT_KEY;
       let token = jwt.sign({ id: results.id }, cert);
-      // console.log(req.body.id, 'this is the token');
+      console.log(req.body.id, 'this is the token');
       //this is true
       res.cookie('token', token, { httpOnly: true });
       return res.json(camelizeKeys(results[0]));
