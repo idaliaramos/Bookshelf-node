@@ -9,5 +9,6 @@ module.exports = {
       user: PGUSER,
       password: PGPASSWORD
     }
-  }
+  },
+  production: { client: 'pg', connection: process.env.DATABASE_URL }
 };
