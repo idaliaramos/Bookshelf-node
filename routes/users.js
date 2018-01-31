@@ -62,6 +62,8 @@ router.post('/users', verifyBody, validateEmail, (req, res, next) => {
     })
     .then(results => {
       console.log(results, 'this is the resul');
+      results = Object.assign({}, results);
+      console.log(results, 'after result');
       delete results[0].hashed_password;
       let cert = JWT_KEY;
       let token = jwt.sign({ id: results.id }, cert);
