@@ -1,0 +1,37 @@
+{
+  "name": "galvanize-bookshelf",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "knex": "knex",
+    "start": "nodemon server.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "boom": "^6.0.0",
+    "brcypt": "^1.0.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "express-jwt": "^5.3.0",
+    "humps": "^2.0.1",
+    "jsonwebtoken": "^8.1.0",
+    "knex": "^0.13.0",
+    "lodash-humps": "^3.1.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.9.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": "8.4.0"
+  }
+}
