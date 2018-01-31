@@ -4,6 +4,12 @@ if (process.env.NODE_ENV !== 'production') {
     path: `.env.${process.env.NODE_ENV}`
   });
 }
+if (process.env.NODE_ENV === 'production') {
+  process.env.NODE_ENV = process.env.NODE_ENV || 'production';
+  require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`
+  });
+}
 
 module.exports = {
   PGHOST: process.env.PGHOST,
