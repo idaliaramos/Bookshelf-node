@@ -1,10 +1,4 @@
-const {
-  PGHOST,
-  PGDATABASE,
-  PGUSER,
-  PGPASSWORD,
-  DATABASE_URL
-} = require('./env');
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = require('./env');
 
 module.exports = {
   [process.env.NODE_ENV]: {
@@ -16,12 +10,5 @@ module.exports = {
       password: PGPASSWORD
     }
   },
-  production: {
-    client: 'pg',
-    connection: {
-      database: DATABASE_URL,
-      user: PGUSER,
-      password: PGPASSWORD
-    }
-  }
+  production: { client: 'pg', connection: process.env.DATABASE_URL }
 };
