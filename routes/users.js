@@ -76,6 +76,3 @@ router.post('/users', verifyBody, validateEmail, (req, res, next) => {
     });
 });
 module.exports = router;
-
-// IWlaAXoeO/nwE1/6bsYezKv0F5k8TY6VEaQuNYHCO6KkdY5yEVu8eAOA79Ia4csX
-// 2DxllX25hxR4jS68eXXYgA==

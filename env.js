@@ -16,5 +16,6 @@ module.exports = {
   PGUSER: process.env.PGUSER,
   PGPASSWORD: process.env.PGPASSWORD,
   PGDATABASE: process.env.PGDATABASE,
-  JWT_KEY: process.env.JWT_KEY
+  JWT_KEY: process.env.JWT_KEY,
+  DATABASE_URL: process.env.DATABASE_URL
 };
